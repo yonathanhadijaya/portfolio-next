@@ -7,6 +7,8 @@ import Image from "next/image";
 import profilePic from "../../public/images/profile/developer-pic-2.jpg";
 import { useMotionValue, useSpring, useInView } from "framer-motion";
 import Skills from "../components/Skills";
+import Experience from "../components/Experience";
+import Education from "../components/Education";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -44,7 +46,10 @@ const about = () => {
       </Head>
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className="pt-0">
-          <AnimatedText text="Passion Fuels Purpose!" className="mb-16" />
+          <AnimatedText
+            text="Passion Fuels Purpose!"
+            className="mb-16 !text-6xl"
+          />
           <div className="grid w-full grid-cols-8 gap-18">
             <div className="col-span-3 flex flex-col items-start justify-start mr-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
@@ -107,6 +112,8 @@ const about = () => {
           </div>
 
           <Skills />
+          <Experience />
+          <Education />
         </Layout>
       </main>
     </>
